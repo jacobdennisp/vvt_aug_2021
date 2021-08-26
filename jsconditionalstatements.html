@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta name="Author" content="Dennis">        
+        <title>JS Conditional Statement Examples | Vivarttana Tech</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <label>Enter value A</label>:<br>
+        <input type="text" id="val1"><br>
+        <label>Enter value B</label>:<br>
+        <input type="text" id="val2"><br>
+        <button type="button" onclick="checkGreater()">find the greater of 2</button>
+
+        <p id="result"></p>
+
+        <script>
+            function checkGreater(){
+                Value1 = document.getElementById("val1").value;
+                console.log(Value1);
+                Value2 = document.getElementById("val2").value;
+                console.log(Value2);
+
+                if(Value1>Value2){
+                    document.getElementById("result").innerHTML="Value 1 is great than value 2"
+                }else{
+                    document.getElementById("result").innerHTML="Value 2 is great than value 1"
+                }
+            }
+        </script>
+    </body>
+</html>
