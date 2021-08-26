@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="Author" content="dennis">
+        <meta name="description" content="sample page for displaying and learning about the forms">
+        <title>Sample Form | Vivarttana Tech</title>
+        <style>
+            /* .bluecolor{
+                color:blue;
+            } */
+            #form_firstname{
+                border-radius: 5px;
+                padding: 10px;
+                margin: 2px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset id="form1-fieldset">
+            <form method="GET" id="form1">
+                <label class="bluecolor" id="form1-lablefirstname">First Name</label> :
+                <input type="text"  placeholder="First Name" id="form_firstname" name="first_name" data-student-name="Rahul" ><br><br>
+                
+                <label>Last Name</label>  :
+                <input type="text" placeholder="Last Name" id="form_lastname" name="last_name"><br><br>
+                
+                <label>Gender</label> : <br>
+                <input type="radio" name="gender" value="male">Male &nbsp;&nbsp;
+                <input type="radio" name="gender" value="female">Female &nbsp;&nbsp;
+                <input type="radio" name="gender" value="rathernotsay">Rather Not Say <br><br>
+
+                <label>Hobbies</label> : <br>
+                <input type="checkbox" name="hobby" value="doing nothing">Doing Nothing &nbsp;&nbsp;
+                <input type="checkbox" name="hobby" value="chilling out">Chilling out &nbsp;&nbsp;
+                <input type="checkbox" name="hobby" value="Sleeping during calss">Sleeping during class &nbsp;&nbsp; <br><br>
+            
+                <label>Class</label> : <br>
+                <select name="user_class">
+                    <option value="">Please Select A Class</option>
+                        <option value="CS">Computer Science</option>
+                    </optgroup>
+                    <option value="EC">Electronics</option>
+                    <option value="BIO">Biology</option>
+                </select><br><br>
+
+                <label class="bluecolor">About Me</label> : <br>
+                <textarea name="aboutme"></textarea> <br><br>
+
+                <label>Upload Profile Pic</label> : <Br>
+                <input type="file" name="profile_pic"><br><br>
+
+                <input type="submit" value="save and proceed">
+                
+                <input type="reset" value="Reset All">
+
+            </form>
+        </fieldset>
+        <script>
+            element=document.getElementById('form_firstname');
+            console.log(element);
+            console.log(element.getAttribute('data-student-name'));
+        </script>
+    </body>
+</html>

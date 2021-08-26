@@ -1,0 +1,46 @@
+.border-style-for-something{
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+    color: green;
+    background-color: white;
+    border-radius: 10px;
+    padding:10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    margin:5px;
+    /* box-shadow: 2px 5px 5px black; */
+    transform:rotateZ(90deg);
+    
+}
+
+.border-style-for-something:hover{
+    border-color: green;
+    /*background-image: linear-gradient(to left, green, lightgreen);*/
+    background-image: radial-gradient(green 25%, yellow 2%, red 2%);
+    color:white;
+}
+
+
+.div-section{
+    display: flex;
+    flex-direction: row;
+    /*   */
+}
+
+/* .div-section > span{
+    padding: 10px;
+} */
+
+/*Code for Animation*/
+.animated-box{
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    animation: changecolor 2s;
+}
+
+@keyframes changecolor {
+    from {background-color: black;}
+    to {background-color: blueviolet;}
+}
