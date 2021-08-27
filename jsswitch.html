@@ -7,20 +7,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     </head>
     <body>
-        <label>Enter value A</label>:<br>
-        <input type="text" id="val1"><br>
-        <label>Enter value B</label>:<br>
-        <input type="text" id="val2"><br>
-        <button type="button" onclick="checkGreater()">find the greater of 2</button>
-        <p id="result"></p>
-        <br><br>
 
         <label>Enter the Operation you want to Perform</label><br>
         <select id="operation" onchange="setOperation(this.value)">
             <option value="">Please Choose a Operation</option>
             <option value="add">Addition</option>
             <option value="sub">Subtraction</option>
+            <option value="got">greater of 2</option>
         </select></br>
+
+        <div id="comparison_section" style="display:none">
+            <label>Enter value A</label>:<br>
+            <input type="text" id="val1"><br>
+            <label>Enter value B</label>:<br>
+            <input type="text" id="val2"><br>
+            <button type="button" onclick="checkGreater()">find the greater of 2</button>
+            <p id="result"></p>
+        </div>
 
         <div id="addition_section" style="display:none">
             <label>Enter Value A</label>:<br>
@@ -43,6 +46,50 @@
 
 
         <script>
+
+
+            function setOperation(operation){
+                // if(operation=='add'){
+                //     document.getElementById('addition_section').style.display='block';
+                //     document.getElementById('subtraction_section').style.display='none';
+                //     document.getElementById('comparison_section').style.display='none'
+                // }else if(operation=='sub'){
+                //     document.getElementById('subtraction_section').style.display='block';
+                //     document.getElementById('addition_section').style.display='none';
+                //     document.getElementById('comparison_section').style.display='none'
+                // }else if(operation=='got'){
+                //     document.getElementById('comparison_section').style.display='block'
+                //     document.getElementById('subtraction_section').style.display='none';
+                //     document.getElementById('addition_section').style.display='none';                    
+                // }
+                
+                switch(operation){
+                    case 'add' : 
+                                document.getElementById('addition_section').style.display='block';
+                                document.getElementById('subtraction_section').style.display='none';
+                                document.getElementById('comparison_section').style.display='none';
+                                break;
+                    case 'sub' :
+                                document.getElementById('subtraction_section').style.display='block';
+                                document.getElementById('addition_section').style.display='none';
+                                document.getElementById('comparison_section').style.display='none'
+                                break;
+                    case 'got' :
+                                document.getElementById('comparison_section').style.display='block'
+                                document.getElementById('subtraction_section').style.display='none';
+                                document.getElementById('addition_section').style.display='none';                    
+                                break;
+                    default : console.log('invalid choice');
+                    break;
+                }
+            }
+
+
+
+
+
+
+
             function checkGreater(){
                 Value1 = document.getElementById("val1").value;
                 console.log(Value1);
@@ -55,16 +102,7 @@
                     document.getElementById("result").innerHTML="Value 2 is great than value 1"
                 }
             }
-
-            function setOperation(operation){
-                if(operation=='add'){
-                    document.getElementById('addition_section').style.display='block';
-                    document.getElementById('subtraction_section').style.display='none';
-                }else{
-                    document.getElementById('subtraction_section').style.display='block';
-                    document.getElementById('addition_section').style.display='none';
-                }
-            }
+            
 
             function performOperation(){
                 if(document.getElementById('operation').value=='add'){
