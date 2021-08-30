@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta name="Author" content="Dennis">        
+        <title>JS Looping Statement Examples | Vivarttana Tech</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        
+    </head>
+    <body>
+        
+        <button type="button" onclick="hidethisthing()">for this thing</button>
+        <button type="button" onclick="hidethatthing()">for that thing</button>
+        <button type="button" onclick="trigger()">add to elemtn 5</button>
+
+        <div id="element3" style="display: none;">
+            this thing
+        </div>
+
+        <div id="element4"  style="display: none;">
+            that thing
+        </div>
+        <br>
+        <div id="element5"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            // console.log();
+            // document.getElementById('something').value;
+            
+            //$('input[name="something"]').val(10);
+            $("#form1").submit(function(){
+                alert("We were on a break");
+            });
+
+            //On Click
+
+            function hidethisthing(){
+                $("#element3").hide();
+                $("#element4").show();
+            }
+            function hidethatthing(){
+                $("#element4").hide();
+                $("#element3").show();
+            }
+            function trigger(){
+                data="<p>how are yous</p>";
+                $("#element5").append(data)
+            }
+        </script>
+    </body>
+</html>
